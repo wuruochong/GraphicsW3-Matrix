@@ -84,7 +84,8 @@ int main() {
 
   matrix_mult(one,two);
   print_matrix(two); */
-  printf("\ntesting add_point function\n");
+
+  /*printf("\ntesting add_point function\n");
   // add_point(edges, 1,2,3);
   // print_matrix(edges);
 
@@ -123,7 +124,44 @@ int main() {
   printf("\n");
   add_point(nedges, 14,15,16);
   printf("\n");
-  print_matrix(nedges);
+  print_matrix(nedges); */
+
+  /*printf("\ntesting add_edge function\n");
+  struct matrix * n1edges = new_matrix(4,4);
+  add_edge(n1edges, 1,2,3,4,5,6);
+  print_matrix(n1edges);
+
+  printf("\n");
+  add_edge(n1edges, 7,8,9,10,11,12);
+  print_matrix(n1edges);
+
+  printf("\n");
+  add_edge(n1edges, 13,14,15,16,17,18);
+  print_matrix(n1edges);
+
+  printf("\n");
+  add_edge(n1edges, 19,20,21,22,23,24);
+  print_matrix(n1edges); */
+  struct matrix * n2edges;
+  n2edges = new_matrix(4,2);
+  add_edge(n2edges,0,0,0,150,125,0);
+  add_edge(n2edges,0,0,0,375,500,0);
+  add_edge(n2edges,150,125,0,300,50,0);
+  add_edge(n2edges,150,125,0,200,0,0);
+  add_edge(n2edges,500,0,0,125,500,0);
+  add_edge(n2edges,500,0,0,350,125,0);
+  add_edge(n2edges,350,125,0,200,50,0);
+  add_edge(n2edges,350,125,0,300,0,0);
+  add_edge(n2edges,250,0,0,250,500,0);
+  add_edge(n2edges,0,250,0,500,250,0);
+  color c;
+  c.red = 0;
+  c.green = MAX_COLOR;
+  c.blue = 0;
+
+  draw_lines(n2edges,s,c);
+  display(s);
+  save_extension(s,"lines.png");
 
   free_matrix( edges );
 }
