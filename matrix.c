@@ -16,7 +16,7 @@ void print_matrix(struct matrix *m) {
   int col = 0;
   while(row < (m->rows)){
     while(col < (m->cols)){
-      printf("%f, ",m->m[row][col]);
+      printf("%f || ",m->m[row][col]);
       col++;
     }
     printf("\n");
@@ -45,6 +45,7 @@ void ident(struct matrix *m) {
     col = 0;
     row++;
   }
+  m->lastcol = (m->cols);
 }
 
 

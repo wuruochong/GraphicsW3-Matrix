@@ -24,14 +24,14 @@ int main() {
   printf("testing scalar mult function\n");
   scalar_mult(3.0,edges);
   print_matrix(edges);
-
+/*
   printf("testing matrix mult function\n");
-  /*struct matrix *identity;
+  struct matrix *identity;
   identity = new_matrix(4,4);
   ident(identity);
   matrix_mult(ident, edges);
   print_matrix(edges);
-  */
+
 
   struct matrix *one;
   struct matrix *two;
@@ -83,8 +83,47 @@ int main() {
   printf("\n");
 
   matrix_mult(one,two);
-  print_matrix(two);
+  print_matrix(two); */
+  printf("\ntesting add_point function\n");
+  // add_point(edges, 1,2,3);
+  // print_matrix(edges);
 
+  struct matrix *nedges = new_matrix(4,5);
+  print_matrix(nedges);
+  printf("\n");
+  add_point(nedges, 1,2,3);
+  printf("\n");
+  print_matrix(nedges);
+
+  printf("\n");
+  add_point(nedges, 3,4,5);
+  printf("\n");
+  print_matrix(nedges);
+
+  printf("\n");
+  add_point(nedges, 4,5,6);
+  printf("\n");
+  print_matrix(nedges);
+
+  printf("\n");
+  add_point(nedges, 7,8,9);
+  printf("\n");
+  print_matrix(nedges);
+
+  printf("\n");
+  add_point(nedges, 10,11,12);
+  printf("\n");
+  print_matrix(nedges);
+
+  printf("\n");
+  add_point(nedges, 13,14,15);
+  printf("\n");
+  print_matrix(nedges);
+
+  printf("\n");
+  add_point(nedges, 14,15,16);
+  printf("\n");
+  print_matrix(nedges);
 
   free_matrix( edges );
 }
